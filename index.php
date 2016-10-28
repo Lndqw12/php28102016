@@ -17,7 +17,7 @@ $arr = array(2,3);
 call_user_func_array(array(&$obj,"summa"),$arr);
 
 echo "<br/>";
-call_user_func(array(&$obj,"showres"));
+echo call_user_func(array(&$obj,"showres"));
 
 /* умножение*/
 $obj->umn(2,3);
