@@ -20,17 +20,35 @@ echo "<br/>";
 echo call_user_func(array(&$obj,"showres"));
 
 /* умножение*/
-$obj->umn(2,3);
+//$obj->umn(2,3);
 echo "<br/>";
-echo $obj->showres();
+//echo $obj->showres();
+call_user_func_array(array(&$obj,"umn"),$arr);
+
+echo "<br/>";
+echo call_user_func(array(&$obj,"showres"));
+
+
+
+
 
 /* вычитание*/
-$obj->minus(2,3);
+//$obj->minus(2,3);
 echo "<br/>";
-echo $obj->showres();
+//echo $obj->showres();
+
+call_user_func_array(array(&$obj,"minus"),$arr);
+
+echo "<br/>";
+echo call_user_func(array(&$obj,"showres"));
 
 /* деление*/
-$obj->delenie(6,3);
+//$obj->delenie(6,3);
 echo "<br/>";
-echo $obj->showres();
+//echo $obj->showres();
+$arr1 = array(6,3);
+call_user_func_array(array(&$obj,"delenie"),$arr1);
+
+echo "<br/>";
+echo call_user_func(array(&$obj,"showres"));
 ?>
